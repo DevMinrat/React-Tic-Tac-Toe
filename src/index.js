@@ -63,7 +63,6 @@ class Game extends React.Component {
       xIsNext: true,
       stepNumber: 0,
       activeBtn: null,
-      winnersSquares: null,
     };
   }
 
@@ -113,7 +112,8 @@ class Game extends React.Component {
     let status;
     if (winner) {
       status = `Выиграл ${winner[0]}`;
-    } else if () {
+      console.log();
+    } else if (!current.squares.includes(null)) {
       status = "Ничья";
     } else {
       status = "Следующий игрок: " + (this.state.xIsNext ? "X" : "O");
